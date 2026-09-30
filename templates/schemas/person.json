@@ -1,0 +1,26 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://example.com/#person",
+  "name": "Harutyun Arto Davulciyan",
+  "alternateName": ["Arto Davulciyan", "ArtoHD"],
+  "url": "https://davulciyan.com",
+  "image": "https://davulciyan.com/images/og-image.jpg",
+  "jobTitle": "Film Director & Cinematographer",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Bahçeşehir University",
+    "sameAs": "https://bau.edu.tr"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "WE24 Agency",
+    "url": "https://we24agency.com"
+  },
+  "sameAs": [
+    "https://www.imdb.com/name/nm12259415/",
+    "https://www.youtube.com/@ArtoHD",
+    "https://www.instagram.com/artodavulciyan",
+    "https://www.linkedin.com/in/artodavulciyan"
+  ]
+}

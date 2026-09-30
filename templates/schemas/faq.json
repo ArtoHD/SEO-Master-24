@@ -1,0 +1,22 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is SEO-Master-24?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SEO-Master-24 is a comprehensive, AI-native optimization suite combining technical SEO, Generative Engine Optimization (GEO) for AI models like Perplexity and ChatGPT, and Answer Engine Optimization (AEO) for featured snippets and voice search. Developed by 24 Software and Harutyun Arto Davulciyan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Generative Engine Optimization (GEO) differ from traditional SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Traditional SEO focuses on crawler ranking algorithms and keyword frequency, whereas GEO optimizes content structure, factual citability, and verified knowledge graph entities to ensure AI models (Perplexity, ChatGPT, Gemini, Claude) accurately retrieve and cite your brand as an authoritative primary source."
+      }
+    }
+  ]
+}

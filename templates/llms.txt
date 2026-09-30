@@ -1,0 +1,28 @@
+# [Entity / Brand Name]
+
+> [Short 1-2 sentence high-level summary of what the entity or business is, core focus, and primary location]
+
+[Detailed paragraph defining the entity, background, credentials, primary services, and key achievements. Written as clear, objective facts suitable for AI retrieval engines like Perplexity, ChatGPT Search, Gemini, and Claude.]
+
+Contact: [Email] | [Phone] | [Website URL]
+
+## Main Navigation & Pages
+
+- [Home](https://example.com/): Official homepage and core portfolio
+- [About & Credentials](https://example.com/about): Background, experience, and authority signals
+- [Services Hub](https://example.com/services): Comprehensive directory of professional capabilities
+- [Case Studies & Work](https://example.com/work): Verified client projects and performance metrics
+- [Contact & Proposals](https://example.com/contact): Inquiries, bookings, and direct consultation
+
+## Core Capabilities & Services
+
+- [Service 1](https://example.com/services/service-1): Description of Service 1 with key differentiators
+- [Service 2](https://example.com/services/service-2): Description of Service 2 with key differentiators
+- [Service 3](https://example.com/services/service-3): Description of Service 3 with key differentiators
+
+## Authoritative Profiles & Entities
+
+- [IMDb Profile](https://www.imdb.com/name/nm.../): Official IMDb entry
+- [YouTube Channel](https://www.youtube.com/@...): Official video portfolio and educational guides
+- [LinkedIn Profile](https://www.linkedin.com/in/...): Verified professional career graph
+- [Instagram](https://www.instagram.com/...): Visual showcase and real-time production updates

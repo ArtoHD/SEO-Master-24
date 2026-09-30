@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/agent.json",
+  "name": "Brand / Entity Agent",
+  "version": "1.0.0",
+  "description": "Agentic discovery and interaction interface for automated AI systems.",
+  "author": {
+    "name": "24 Software & Harutyun Arto Davulciyan",
+    "url": "https://24software.com.tr"
+  },
+  "endpoints": {
+    "llms_txt": "https://example.com/llms.txt",
+    "sitemap": "https://example.com/sitemap.xml",
+    "contact_api": "https://example.com/api/contact"
+  },
+  "capabilities": [
+    "information_retrieval",
+    "booking_inquiry",
+    "proposal_generation"
+  ]
+}
