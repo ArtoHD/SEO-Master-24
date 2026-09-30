@@ -209,11 +209,29 @@ def audit_url(url: str) -> dict:
         passes.append(f"All {len(parser.images)} images have alt text.")
 
     # Structured Data
+    def extract_types(obj):
+        found = []
+        if isinstance(obj, dict):
+            t = obj.get("@type")
+            if t:
+                if isinstance(t, list):
+                    found.extend([str(x) for x in t])
+                else:
+                    found.append(str(t))
+            if "@graph" in obj:
+                found.extend(extract_types(obj["@graph"]))
+        elif isinstance(obj, list):
+            for item in obj:
+                found.extend(extract_types(item))
+        return found
+
     schema_types = []
     for item in parser.json_ld:
-        if isinstance(item, dict):
-            t = item.get("@type")
-            if t: schema_types.append(t)
+        schema_types.extend(extract_types(item))
+    
+    # Deduplicate while preserving order
+    schema_types = list(dict.fromkeys(schema_types))
+
     if schema_types:
         passes.append(f"JSON-LD Schema detected: {', '.join(schema_types)}")
     else:

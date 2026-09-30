@@ -82,12 +82,17 @@ class PerformanceHTMLParser(HTMLParser):
                     "fetchpriority": attr_dict.get("fetchpriority", "auto")
                 })
 
+import gzip
+
 def run_fast_heuristics(url):
     """Zero-dependency instant on-page Core Web Vitals and PageSpeed heuristics audit."""
     start_time = time.time()
     req = urllib.request.Request(
         url,
-        headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 SEO-Master-24"}
+        headers={
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 SEO-Master-24",
+            "Accept-Encoding": "gzip, deflate"
+        }
     )
     
     try:
@@ -95,9 +100,23 @@ def run_fast_heuristics(url):
             ttfb_ms = round((time.time() - start_time) * 1000, 2)
             status_code = resp.status
             content = resp.read()
-            html_text = content.decode("utf-8", errors="replace")
+            headers = {k.lower(): v for k, v in resp.headers.items()}
+            content_encoding = headers.get("content-encoding", "").lower()
+            
+            if "gzip" in content_encoding:
+                try:
+                    html_text = gzip.decompress(content).decode("utf-8", errors="replace")
+                except Exception:
+                    html_text = content.decode("utf-8", errors="replace")
+            elif "deflate" in content_encoding:
+                try:
+                    import zlib
+                    html_text = zlib.decompress(content).decode("utf-8", errors="replace")
+                except Exception:
+                    html_text = content.decode("utf-8", errors="replace")
+            else:
+                html_text = content.decode("utf-8", errors="replace")
             content_length = len(content)
-            headers = dict(resp.headers)
     except Exception as e:
         return {"error": f"Failed to fetch {url}: {e}", "url": url}
 

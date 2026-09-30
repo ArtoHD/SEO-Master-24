@@ -63,14 +63,14 @@ def analyze_geo(url_or_text: str, is_raw_text: bool = False) -> dict:
 
     # 2. Quotable Claim & Definition Patterns ("X is...", "X provides...", etc.)
     definition_patterns = re.findall(
-        r'\b(?:is a|is an|is the|refers to|defined as|provides|specializes in|features|founded in|graduated from)\b',
+        r'\b(?:is a|is an|is the|refers to|defined as|provides|specializes in|features|founded in|graduated from|nedir|tanımı|kurulmuştur|kuruldu|uzmandır|sağlar|sunar|yönetmektedir|kurucusudur|mezunudur)\b',
         text,
         re.IGNORECASE
     )
 
     # 3. Direct Answer & Structural Clarity
-    bullet_matches = re.findall(r'(?:•|\-|\d+\.)\s+[A-Z0-9]', text)
-    question_matches = re.findall(r'[A-Za-z0-9\sğüşöçıİĞÜŞÖÇ]+\?', text)
+    bullet_matches = re.findall(r'(?:•|\-|\d+\.)\s+[A-Z0-9ĞÜŞÖÇİ]', text)
+    question_matches = re.findall(r'[^.?!\n]+(?:\?|nasıl|nedir|kimdir|nerede|ne zaman|neden|hangi|kaç|how|what|who|where|when|why|which)[^.?!\n]*\?', text, re.IGNORECASE)
 
     # 4. E-E-A-T & Authority Keywords
     eeat_keywords = [
