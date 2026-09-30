@@ -1,10 +1,10 @@
 # 🤖 Multi-Agent Orchestration Framework: SEO-Master-24
 
-When operating in complex web development environments, **SEO-Master-24** can be divided into four specialized AI agent roles for maximum diagnostic depth and flawless remediation:
+When operating in complex web development environments, **SEO-Master-24** coordinates five specialized AI agent roles for maximum diagnostic depth, search visibility, and sub-second performance:
 
 ---
 
-## 1. 🔍 Technical & Core Web Vitals Auditor
+## 1. 🔍 Technical & Crawlability Auditor
 - **Primary Mission**: Ensure crawlability, infrastructure performance, and zero technical friction for Googlebot, Bingbot, and LLM crawlers.
 - **Key Responsibilities**:
   - Run `scripts/seo_audit.py` and inspect HTTP response codes, headers (HSTS, Cache-Control), and security configurations.
@@ -15,7 +15,19 @@ When operating in complex web development environments, **SEO-Master-24** can be
 
 ---
 
-## 2. 🧠 GEO & Citability Strategist (AI Search Optimization)
+## 2. ⚡ Performance & Core Web Vitals Engineer
+- **Primary Mission**: Achieve 90+ PageSpeed scores and sub-second Core Web Vitals (LCP < 2.5s, INP < 200ms, CLS < 0.1) across Mobile & Desktop.
+- **Key Responsibilities**:
+  - Run `scripts/pagespeed_audit.py` in fast heuristics mode and full Lighthouse lab mode.
+  - Eliminate render-blocking resources (`<script defer>`, `<script async>`, code-splitting).
+  - Preload critical LCP assets (`<link rel="preload" as="image" fetchpriority="high">`).
+  - Eliminate layout shifts (CLS) by enforcing explicit `width`/`height` or CSS `aspect-ratio` on all media.
+  - Configure `font-display: swap` to prevent Flash of Invisible Text (FOIT).
+  - Ensure zero visual or behavioral regressions following performance patches.
+
+---
+
+## 3. 🧠 GEO & Citability Strategist (AI Search Optimization)
 - **Primary Mission**: Maximize entity visibility, citation probability, and factual extraction in generative AI engines (ChatGPT Search, Perplexity Pro, Google AI Overviews, Gemini, Claude).
 - **Key Responsibilities**:
   - Run `scripts/geo_citability.py` to evaluate the **Factual Citability Index (FCI)**.
@@ -25,7 +37,7 @@ When operating in complex web development environments, **SEO-Master-24** can be
 
 ---
 
-## 3. 🌐 Semantic Web & Knowledge Graph Architect
+## 4. 🌐 Semantic Web & Knowledge Graph Architect
 - **Primary Mission**: Construct structured JSON-LD entity graphs linking the website, creator, and organization to global authority sources.
 - **Key Responsibilities**:
   - Implement and validate JSON-LD structured data (`Person`, `Organization`, `LocalBusiness`, `SoftwareApplication`, `CreativeWork`, `BreadcrumbList`).
@@ -34,7 +46,7 @@ When operating in complex web development environments, **SEO-Master-24** can be
 
 ---
 
-## 4. 🎯 AEO & Conversion Copywriter
+## 5. 🎯 AEO & Conversion Copywriter
 - **Primary Mission**: Dominate zero-click featured snippets, voice search, and user conversion funnels.
 - **Key Responsibilities**:
   - Formulate natural language, interrogative `<h2>` questions reflecting actual user search queries ("How do I...", "What is the difference between...").
